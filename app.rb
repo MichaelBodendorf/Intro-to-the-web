@@ -3,6 +3,10 @@ require "sinatra/reloader" if development?
 
 Sinatra::Reloader
 
+# def initialize
+#   @random_name = ["Amigo", "Misty", "Almond"].sample
+# end
+
 get "/" do 
   "hello!"
 end
@@ -11,6 +15,13 @@ get "/secret" do
   "hello Marcus and Michael!"
 end
   
-get '/cat' do 
+get '/random_cat' do 
+  @random_name = ["Amigo", "Misty", "Almond"].sample
+  erb(:index)
+end
+
+get '/named_cat' do 
+  p params
+  @random_name = params[:name]
   erb(:index)
 end

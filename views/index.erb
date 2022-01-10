@@ -1,4 +1,6 @@
-<h1> My name is <%=["Amigo", "Misty", "Almond"].sample%></h1>
+<% if @random_name %>
+<h1>My name is <%=@random_name %></h1>
+<% end %>
 <div style='border: 3px dashed black'>
 <img src='https://m.media-amazon.com/images/I/51KNy3fAsgL._AC_.jpg'>
 </div>
