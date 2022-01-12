@@ -3,9 +3,10 @@ require "sinatra/reloader" if development?
 
 Sinatra::Reloader
 
+
 # def initialize
 #   @random_name = ["Amigo", "Misty", "Almond"].sample
-# end
+# end blahh
 
 get "/" do 
   "hello!"
